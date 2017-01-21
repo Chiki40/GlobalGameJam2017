@@ -60,6 +60,7 @@ public class GravityManager : MonoBehaviour {
             gravityForce.bottom = Vector3.zero;
 			if (up) {
                 Vector3 dir = (magnetUp.transform.position - m_gravityComponents[i].transform.position);
+				dir = new Vector3(0.0f, 0.0f, dir.z);
                 float distance = dir.magnitude;
                 if (distance < m_verticalDistance)
                 {
@@ -70,6 +71,7 @@ public class GravityManager : MonoBehaviour {
 			}
 			if (down) {
                 Vector3 dir = (magnetDown.transform.position - m_gravityComponents[i].transform.position);
+				dir = new Vector3(0.0f, 0.0f, dir.z);
                 float distance = dir.magnitude;
                 if (distance < m_verticalDistance)
                 {
@@ -80,6 +82,7 @@ public class GravityManager : MonoBehaviour {
 			}
 			if (left) {
                 Vector3 dir = (magnetLeft.transform.position - m_gravityComponents[i].transform.position);
+				dir = new Vector3(dir.x, 0.0f, 0.0f);
                 float distance = dir.magnitude;
                 if (distance < m_horizontalDistance)
                 {
@@ -90,6 +93,7 @@ public class GravityManager : MonoBehaviour {
 			}
 			if (right) {
                 Vector3 dir = (magnetRight.transform.position - m_gravityComponents[i].transform.position);
+				dir = new Vector3(dir.x, 0.0f, 0.0f);
                 float distance = dir.magnitude;
                 if (distance < m_horizontalDistance)
                 {
