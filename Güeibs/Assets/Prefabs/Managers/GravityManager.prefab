@@ -52,3 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityModule: 300
+  magnetUp: {fileID: 0}
+  magnetDown: {fileID: 0}
+  magnetLeft: {fileID: 0}
+  magnetRight: {fileID: 0}
+  magnetUpLeft: {fileID: 0}
+  magnetUpRight: {fileID: 0}
+  magnetDownLeft: {fileID: 0}
+  magnetDownRight: {fileID: 0}

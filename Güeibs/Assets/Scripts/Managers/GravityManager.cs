@@ -6,18 +6,23 @@ public class GravityManager : MonoBehaviour {
 
 	private static GravityManager m_instance = null;
 
-	private Vector3 m_gravityForce = Vector3.zero;
 	private List<GravityComponent> m_gravityComponents = null;
 
 	public float gravityModule = 9.8f;
+	public GameObject magnetUp = null;
+	public GameObject magnetDown = null;
+	public GameObject magnetLeft = null;
+	public GameObject magnetRight = null;
 
 	public void Awake() {
 		if (m_instance) {
 			Destroy(this.gameObject);
 		} else {
 			m_instance = this;
-			DontDestroyOnLoad(this.gameObject);
 			m_gravityComponents = new List<GravityComponent>();
+			if(!magnetUp || !magnetDown || !magnetLeft || !magnetRight) {
+				Debug.LogError("Error. GravityManager does not have a corner assigned");
+			}
 		}
 	}
 
@@ -34,22 +39,22 @@ public class GravityManager : MonoBehaviour {
 	}
 
 	public void SetGravityDirection(bool up, bool down, bool left, bool right) {
-		m_gravityForce = Vector3.zero;
-		if (up) {
-			m_gravityForce.z += gravityModule;
-		}
-		if (down) {
-			m_gravityForce.z -= gravityModule;	
-		}
-		if (left) {
-			m_gravityForce.x -= gravityModule;
-		}
-		if (right) {
-			m_gravityForce.x += gravityModule;
-		}
-
+		Vector3 gravityForce;
 		for (int i = 0; i < m_gravityComponents.Count; ++i) {
-			m_gravityComponents[i].SetGravity(m_gravityForce);
+			gravityForce = Vector3.zero;
+			if (up) {
+				gravityForce += (magnetUp.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+			}
+			if (down) {
+				gravityForce += (magnetDown.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+			}
+			if (left) {
+				gravityForce += (magnetLeft.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+			}
+			if (right) {
+				gravityForce += (magnetRight.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+			}					
+			m_gravityComponents[i].SetGravity(gravityForce);
 		}
 	}
 
