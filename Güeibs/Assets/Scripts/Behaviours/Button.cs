@@ -5,18 +5,20 @@ using UnityEngine.Events;
 
 public class Button : MonoBehaviour
 {
-    public UnityEvent[] Actions;
+    public UnityEvent Actions;
 
     void OnTriggerEnter(Collider other)
     {
         DoButton();
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        DoButton();
+    }
+
     private void DoButton()
     {
-        for (int i = 0; i < Actions.Length; ++i)
-        {
-            Actions[i].Invoke();
-        }
+        Actions.Invoke();
     }
 }
