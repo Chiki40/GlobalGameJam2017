@@ -18,6 +18,9 @@ public class GravityComponent : MonoBehaviour {
 	}
 
 	public void SetGravity(GravityManager.AttractionForces newGravity) {
+		if (!this.enabled) {
+			return;
+		}
 		m_gravity = newGravity.left + newGravity.right + newGravity.top + newGravity.bottom;
         Animator animator = GetComponent<Animator>();
         if (animator)
