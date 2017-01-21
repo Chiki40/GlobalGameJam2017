@@ -53,6 +53,17 @@ public class GravityManager : MonoBehaviour {
 
 	public void SetGravityDirection(bool up, bool down, bool left, bool right) {
         AttractionForces gravityForce;
+
+		// Wave visual effect for magnets
+		WaveGenerator WaveGeneratorUp = magnetUp.transform.GetChild(0).gameObject.GetComponent<WaveGenerator>();
+		WaveGenerator WaveGeneratorDown = magnetDown.transform.GetChild(0).gameObject.GetComponent<WaveGenerator>();
+		WaveGenerator WaveGeneratorLeft = magnetLeft.transform.GetChild(0).gameObject.GetComponent<WaveGenerator>();
+		WaveGenerator WaveGeneratorRight = magnetRight.transform.GetChild(0).gameObject.GetComponent<WaveGenerator>();
+		WaveGeneratorUp.enabled = up;
+		WaveGeneratorDown.enabled = down;
+		WaveGeneratorLeft.enabled = left;
+		WaveGeneratorRight.enabled = right;
+
 		for (int i = 0; i < m_gravityComponents.Count; ++i) {
 			gravityForce.left = Vector3.zero;
             gravityForce.right = Vector3.zero;
