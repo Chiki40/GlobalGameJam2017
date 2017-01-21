@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour {
 		SceneManager.LoadScene(LEVEL_PREFIX + (m_currentLevel).ToString());
 	}
 
+	public void SelectLevel(int level) {
+		m_currentLevel = (uint)level;
+		SceneManager.LoadScene(LEVEL_PREFIX + (m_currentLevel).ToString());
+	}
+
 	public void RestartLevel()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -50,6 +55,22 @@ public class GameManager : MonoBehaviour {
 
 	public void SaveGame() {
 		PlayerPrefs.SetInt(LEVEL_PREFIX, (int)m_currentLevel);
+	}
+
+	public void GoToMenu() {
+		SceneManager.LoadScene("Menu");
+	}
+
+	public void GoToSelectionLevel() {
+		SceneManager.LoadScene("LvlSelection");
+	}
+
+	public void GoToCredits() {
+		SceneManager.LoadScene("Credits");
+	}
+
+	public void ExitGame() {
+		Application.Quit();
 	}
 
 }
