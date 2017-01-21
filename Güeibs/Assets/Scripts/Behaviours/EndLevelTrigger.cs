@@ -12,6 +12,6 @@ public class EndLevelTrigger : MonoBehaviour {
     private void DoEndLevel()
     {
         Debug.Log("we finish the level, play some sound and some animation, particles... whatever");
-        LevelManager.GetInstance().NextLevel();
+		GameManager.GetInstance().NextLevel();
     }
 }
