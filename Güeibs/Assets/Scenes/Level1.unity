@@ -50,8 +50,8 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 4
     m_Resolution: 2
@@ -71,8 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 112000001, guid: 0bde82d4d46182042ad71d8acb18c2d9,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -134,83 +133,6 @@ Prefab:
     - target: {fileID: 1489720798536416, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
       propertyPath: m_Name
       value: CommonScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 1747218292169402, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1479708982980130, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406531830489030, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108729407303067000, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_BounceIntensity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108459163266248170, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_BounceIntensity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108729407303067000, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 108459163266248170, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 108609066011321938, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Shadows.m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 108609066011321938, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Shadows.m_Strength
-      value: 0.314
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783129313817706, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.6830127
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783129313817706, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.18301266
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783129313817706, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.18301266
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783129313817706, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.6830127
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783129313817706, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 108609066011321938, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 108729407303067000, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 108459163266248170, guid: 547ca09db67fc6c47b22132072a10aa0,
-        type: 2}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
