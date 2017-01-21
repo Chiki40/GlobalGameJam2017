@@ -7,10 +7,12 @@ public class MovePingPong : MonoBehaviour {
     public Transform P1;
     public Transform P2;
     public float TotalTime;
+    public bool PingPong;
 
     private Vector3 actualP1;
     private Vector3 actualP2;
     private float _timeAcum;
+
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,10 @@ public class MovePingPong : MonoBehaviour {
         {
             SwitchOriginAndDestiny();
             _timeAcum = 0;
+            if(!PingPong)
+            {
+                this.enabled = false;
+            }
         }
 
         float currentTime = _timeAcum / TotalTime;
