@@ -21,6 +21,6 @@ public class DeathTrigger : MonoBehaviour {
     private void DoDeath()
     {
         Debug.Log("we are dead, maybe play some sound or some dead animation");
-        LevelManager.GetInstance().RestartLevel();
+		GameManager.GetInstance().RestartLevel();
     }
 }
