@@ -57,4 +57,20 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetInt(LEVEL_PREFIX, (int)m_currentLevel);
 	}
 
+	public void GoToMenu() {
+		SceneManager.LoadScene("Menu");
+	}
+
+	public void GoToSelectionLevel() {
+		SceneManager.LoadScene("LvlSelection");
+	}
+
+	public void GoToCredits() {
+		SceneManager.LoadScene("Credits");
+	}
+
+	public void ExitGame() {
+		Application.Quit();
+	}
+
 }
