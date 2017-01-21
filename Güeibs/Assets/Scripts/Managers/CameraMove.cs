@@ -10,6 +10,8 @@ public class CameraMove : MonoBehaviour {
 	void Start () 
     {
         m_animatorComponent = GetComponent<Animator>();
+        if (!otherAnimator)
+            otherAnimator = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
