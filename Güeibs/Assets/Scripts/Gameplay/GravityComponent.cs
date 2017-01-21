@@ -23,10 +23,14 @@ public class GravityComponent : MonoBehaviour {
 		}
 		m_gravity = newGravity.left + newGravity.right + newGravity.top + newGravity.bottom;
         Animator animator = GetComponent<Animator>();
+        Debug.DrawRay(Vector3.up, m_gravity.normalized,Color.red,2);
+        Debug.Log(m_gravity);
         if (animator)
         {
-            animator.SetFloat("x",Mathf.Clamp((newGravity.left + newGravity.right).x,-1,1), 0.2f,Time.deltaTime);
-            animator.SetFloat("y", Mathf.Clamp((newGravity.top + newGravity.bottom).z,-1,1), 0.2f, Time.deltaTime);
+            animator.SetFloat("x", Mathf.Clamp(m_gravity.normalized.x, -1, 1), 0.2f, Time.deltaTime);
+            animator.SetFloat("y", Mathf.Clamp(m_gravity.normalized.z, -1, 1), 0.2f, Time.deltaTime);
+            //animator.SetFloat("x",Mathf.Clamp((newGravity.left + newGravity.right).x,-1,1), 0.2f,Time.deltaTime);
+            //animator.SetFloat("y", Mathf.Clamp((newGravity.top + newGravity.bottom).z,-1,1), 0.2f, Time.deltaTime);
         }
 	}
 
