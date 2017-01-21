@@ -30,12 +30,12 @@ public class WaveGenerator : MonoBehaviour
         if (timeAcumBetweenWaves >= TimeBetweenWaves)
         {
             GameObject go = Instantiate(m_wave);
-            go.transform.position = this.transform.position;
-            go.transform.localScale = Vector3.zero;
             Color emptyColor = WaveColor;
             emptyColor.a = 0;
             go.GetComponent<Renderer>().material.color = emptyColor;
             go.transform.SetParent(this.transform);
+			go.transform.localScale = Vector3.zero;
+			go.transform.localPosition = Vector3.zero;
             listWaves.Add(go);
             go.name = count.ToString();
             ++count;
