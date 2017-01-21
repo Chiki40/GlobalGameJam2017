@@ -15,10 +15,6 @@ public class WaveGenerator : MonoBehaviour
 
     private float timeAcumBetweenWaves;
     private static int count = 0;
-    void Start()
-    {
-        timeAcumBetweenWaves = TimeBetweenWaves;// with this hack we have a initial wave
-    }
 
     void Update()
     {
@@ -48,6 +44,13 @@ public class WaveGenerator : MonoBehaviour
             t.GetComponent<Wave>().destroySpeed = DestroySpeed;
         }
     }
+
+    public void OnEnable()
+    {
+        timeAcumBetweenWaves = TimeBetweenWaves; // with this hack we have a initial wave
+    }
+
+    
 
 
 }

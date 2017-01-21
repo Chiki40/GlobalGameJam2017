@@ -2670,15 +2670,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1098363326799384}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1230df4c6ac36a84eafced975328dad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_wave: {fileID: 1714732676771822, guid: 268da30f2d44eaa409954ccb166a2481, type: 2}
-  TimeWave: 3.78
+  TimeWave: 1.8
   TotalScale: 26
-  TimeBetweenWaves: 1.3
+  TimeBetweenWaves: 0.8
   WaveColor: {r: 1, g: 0, b: 0, a: 0}
   InsideToOutside: 0
   DestroySpeed: 0.1
@@ -2700,15 +2700,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1941939096468556}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1230df4c6ac36a84eafced975328dad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_wave: {fileID: 1714732676771822, guid: 268da30f2d44eaa409954ccb166a2481, type: 2}
-  TimeWave: 3.78
+  TimeWave: 1.8
   TotalScale: 26
-  TimeBetweenWaves: 1.3
+  TimeBetweenWaves: 0.8
   WaveColor: {r: 1, g: 0, b: 0, a: 0}
   InsideToOutside: 0
   DestroySpeed: 0.1
@@ -2718,15 +2718,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638696833997190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1230df4c6ac36a84eafced975328dad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_wave: {fileID: 1714732676771822, guid: 268da30f2d44eaa409954ccb166a2481, type: 2}
-  TimeWave: 3.78
+  TimeWave: 1.8
   TotalScale: 26
-  TimeBetweenWaves: 1.3
+  TimeBetweenWaves: 0.8
   WaveColor: {r: 1, g: 0, b: 0, a: 0}
   InsideToOutside: 0
   DestroySpeed: 0.1
@@ -2850,15 +2850,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1906753554512840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1230df4c6ac36a84eafced975328dad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_wave: {fileID: 1714732676771822, guid: 268da30f2d44eaa409954ccb166a2481, type: 2}
-  TimeWave: 3.78
+  TimeWave: 1.8
   TotalScale: 26
-  TimeBetweenWaves: 1.3
+  TimeBetweenWaves: 0.8
   WaveColor: {r: 1, g: 0, b: 0, a: 0}
   InsideToOutside: 0
   DestroySpeed: 0.1
