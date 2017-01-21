@@ -6,8 +6,17 @@ public class DeathTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        DoDeath();
+		if (other.gameObject.tag == "Player") {
+			DoDeath();
+		}
     }
+
+	void OnCollisionEnter(Collision col)
+	{
+		if (col.collider.gameObject.tag == "Player") {
+			DoDeath();
+		}
+	}
 
     private void DoDeath()
     {

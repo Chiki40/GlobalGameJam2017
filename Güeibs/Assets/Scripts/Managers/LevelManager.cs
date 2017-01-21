@@ -10,7 +10,12 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        m_instance = this;
+		if (m_instance != null) {
+			Destroy (this.gameObject);
+		} else {
+			m_instance = this;
+			DontDestroyOnLoad(this.gameObject);
+		}
     }
 
     public static LevelManager GetInstance()

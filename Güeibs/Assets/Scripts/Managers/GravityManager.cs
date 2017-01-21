@@ -16,7 +16,7 @@ public class GravityManager : MonoBehaviour {
 			Destroy(this.gameObject);
 		} else {
 			m_instance = this;
-			DontDestroyOnLoad(m_instance);
+			DontDestroyOnLoad(this.gameObject);
 			m_gravityComponents = new List<GravityComponent>();
 		}
 	}
