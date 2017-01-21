@@ -374,6 +374,16 @@ Prefab:
       propertyPath: magnetDownRight
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114638540474880870, guid: db41fe0a1f73f154db9c686fb639d07c,
+        type: 2}
+      propertyPath: gravityModule
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114638540474880870, guid: db41fe0a1f73f154db9c686fb639d07c,
+        type: 2}
+      propertyPath: gravityEffectRadius
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db41fe0a1f73f154db9c686fb639d07c, type: 2}
   m_IsPrefabParent: 0

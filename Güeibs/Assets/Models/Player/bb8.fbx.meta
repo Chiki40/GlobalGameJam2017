@@ -223,7 +223,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Center
       takeName: Take 001
-      firstFrame: 1
+      firstFrame: 0.96
       lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
@@ -261,7 +261,7 @@ ModelImporter:
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 0.96
     isReadable: 1
   meshes:
     lODScreenPercentages: []

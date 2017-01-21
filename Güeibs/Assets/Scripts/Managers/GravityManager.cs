@@ -13,6 +13,16 @@ public class GravityManager : MonoBehaviour {
 	public GameObject magnetDown = null;
 	public GameObject magnetLeft = null;
 	public GameObject magnetRight = null;
+    private float m_verticalDistance;
+    private float m_horizontalDistance;
+
+    public struct AttractionForces
+    {
+        public Vector3 left;
+        public Vector3 right;
+        public Vector3 top;
+        public Vector3 bottom;
+    }
 
 	public void Awake() {
 		if (m_instance) {
@@ -21,8 +31,11 @@ public class GravityManager : MonoBehaviour {
 			m_instance = this;
 			m_gravityComponents = new List<GravityComponent>();
 			if(!magnetUp || !magnetDown || !magnetLeft || !magnetRight) {
-				Debug.LogError("Error. GravityManager does not have a corner assigned");
+				Debug.LogError("Error. GravityManager does not have a magnet assigned");
 			}
+
+            m_verticalDistance = (magnetUp.transform.position - magnetDown.transform.position).magnitude +4;
+            m_horizontalDistance = (magnetRight.transform.position - magnetLeft.transform.position).magnitude + 4;
 		}
 	}
 
@@ -39,23 +52,53 @@ public class GravityManager : MonoBehaviour {
 	}
 
 	public void SetGravityDirection(bool up, bool down, bool left, bool right) {
-		Vector3 gravityForce;
+        AttractionForces gravityForce;
 		for (int i = 0; i < m_gravityComponents.Count; ++i) {
-			gravityForce = Vector3.zero;
+			gravityForce.left = Vector3.zero;
+            gravityForce.right = Vector3.zero;
+            gravityForce.top = Vector3.zero;
+            gravityForce.bottom = Vector3.zero;
 			if (up) {
-				gravityForce += (magnetUp.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+                Vector3 dir = (magnetUp.transform.position - m_gravityComponents[i].transform.position);
+                float distance = dir.magnitude;
+                if (distance < m_verticalDistance)
+                {
+                    dir.Normalize();
+                    Vector3 force = dir * (m_verticalDistance - distance);
+                    gravityForce.top = force * gravityModule;
+                }
 			}
 			if (down) {
-				gravityForce += (magnetDown.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+                Vector3 dir = (magnetDown.transform.position - m_gravityComponents[i].transform.position);
+                float distance = dir.magnitude;
+                if (distance < m_verticalDistance)
+                {
+                    dir.Normalize();
+                    Vector3 force = dir * (m_verticalDistance - distance);
+                    gravityForce.bottom = force * gravityModule;
+                }
 			}
 			if (left) {
-				gravityForce += (magnetLeft.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+                Vector3 dir = (magnetLeft.transform.position - m_gravityComponents[i].transform.position);
+                float distance = dir.magnitude;
+                if (distance < m_horizontalDistance)
+                {
+                    dir.Normalize();
+                    Vector3 force = dir * (m_horizontalDistance - distance);
+                    gravityForce.left = force * gravityModule;
+                }
 			}
 			if (right) {
-				gravityForce += (magnetRight.transform.position - m_gravityComponents[i].transform.position).normalized * gravityModule;
+                Vector3 dir = (magnetRight.transform.position - m_gravityComponents[i].transform.position);
+                float distance = dir.magnitude;
+                if (distance < m_horizontalDistance)
+                {
+                    dir.Normalize();
+                    Vector3 force = dir * (m_horizontalDistance - distance);
+                    gravityForce.right = force * gravityModule;
+                }
 			}					
 			m_gravityComponents[i].SetGravity(gravityForce);
 		}
 	}
-
 }

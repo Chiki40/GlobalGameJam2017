@@ -17,11 +17,17 @@ public class GravityComponent : MonoBehaviour {
 		m_gravity = Vector3.zero;
 	}
 
-	public void SetGravity(Vector3 newGravity) {
-		m_gravity = newGravity;
+	public void SetGravity(GravityManager.AttractionForces newGravity) {
+		m_gravity = newGravity.left + newGravity.right + newGravity.top + newGravity.bottom;
+        Animator animator = GetComponent<Animator>();
+        if (animator)
+        {
+            animator.SetFloat("x",Mathf.Clamp((newGravity.left + newGravity.right).x,-1,1), 0.2f,Time.deltaTime);
+            animator.SetFloat("y", Mathf.Clamp((newGravity.top + newGravity.bottom).z,-1,1), 0.2f, Time.deltaTime);
+        }
 	}
 
-	public void Update() {
+	public void FixedUpdate() {
 		m_rigidBody.AddForce(m_gravity, ForceMode.Acceleration);
 	}
 }
