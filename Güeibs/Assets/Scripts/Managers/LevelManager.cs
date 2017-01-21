@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
     public int LevelID;
     private static LevelManager m_instance;
 
+    public Door[] m_doors;
+
     void Awake()
     {
 		if (m_instance != null) {
@@ -30,5 +32,13 @@ public class LevelManager : MonoBehaviour
     public void NextLevel()
     {
         //TODO call to gamemanager to load the next level
+    }
+
+    public void KeyPicked(int id)
+    {
+        for(int i = 0; i < m_doors.Length; ++i)
+        {
+            m_doors[i].AddKey(id);
+        }
     }
 }
