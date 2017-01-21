@@ -27,8 +27,9 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
     public void NextLevel()
     {
-        //TODO call to gamemanager to load the next level
+		SceneManager.LoadScene(GameManager.GetInstance().ReturnNextLevelName());
     }
 }
