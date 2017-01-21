@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23485438986204168}
   - component: {fileID: 114457093415516530}
   m_Layer: 0
-  m_Name: WaveGeneratorExample
+  m_Name: WaveGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,3 +109,4 @@ MonoBehaviour:
   TotalScale: 2
   TimeBetweenWaves: 0.5
   WaveColor: {r: 1, g: 0, b: 0, a: 0}
+  InsideToOutside: 0
