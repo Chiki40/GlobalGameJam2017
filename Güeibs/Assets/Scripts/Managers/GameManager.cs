@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour {
 		SceneManager.LoadScene(LEVEL_PREFIX + (m_currentLevel).ToString());
 	}
 
+	public void SelectLevel(int level) {
+		m_currentLevel = (uint)level;
+		SceneManager.LoadScene(LEVEL_PREFIX + (m_currentLevel).ToString());
+	}
+
 	public void RestartLevel()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
