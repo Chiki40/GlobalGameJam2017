@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour {
 	private IEnumerator DieCoroutine(DeathReason reason, GameObject killer) {
 		this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero; // Reset layer velocity
 		this.gameObject.GetComponent<GravityComponent>().enabled = false; // Disable character controller
+		this.gameObject.GetComponent<Animator>().SetFloat("x", 0.0f);
+		this.gameObject.GetComponent<Animator>().SetFloat("y", 0.0f);
 		switch (reason) {
 			case DeathReason.Blackhole:
 				yield return StartCoroutine(DieBlackhole(killer));
