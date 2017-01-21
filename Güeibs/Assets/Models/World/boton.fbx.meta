@@ -1,15 +1,25 @@
 fileFormatVersion: 2
-guid: ea3acd265506b60408a507dd664e13e2
-timeCreated: 1485009130
+guid: b317e6ce4a38c78439f60033431d56c8
+timeCreated: 1485016475
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: boton
+    100004: joint6
+    100006: joint7
     400000: //RootNode
+    400002: boton
+    400004: joint6
+    400006: joint7
     2300000: //RootNode
     3300000: //RootNode
-    4300000: plataforma_amarilla
+    4300000: "bot\xF3n"
+    4300002: boton
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: boton
   materials:
     importMaterials: 1
     materialName: 0
@@ -72,7 +82,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
