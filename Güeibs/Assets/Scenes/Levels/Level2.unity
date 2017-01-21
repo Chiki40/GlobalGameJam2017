@@ -216,6 +216,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520658211 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114710759879663948, guid: 94fd04477d0584a44a54a3c56417f87b,
+    type: 2}
+  m_PrefabInternal: {fileID: 856251010}
+  m_Script: {fileID: 11500000, guid: fa86665e0e2ff144bbaff4772d7f8ed4, type: 3}
 --- !u!1 &554349196
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,12 +322,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fd04477d0584a44a54a3c56417f87b, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &856251011 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114403378335536126, guid: 94fd04477d0584a44a54a3c56417f87b,
-    type: 2}
-  m_PrefabInternal: {fileID: 856251010}
-  m_Script: {fileID: 11500000, guid: fa86665e0e2ff144bbaff4772d7f8ed4, type: 3}
 --- !u!1001 &1108809975
 Prefab:
   m_ObjectHideFlags: 0
@@ -557,7 +557,7 @@ Prefab:
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 856251011}
+      objectReference: {fileID: 520658211}
     - target: {fileID: 114071965617171748, guid: 31ae77d8ec038f64fb99663c4cbe1752,
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
