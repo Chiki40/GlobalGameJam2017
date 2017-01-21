@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4244449982512020}
   - component: {fileID: 33231634668864378}
   - component: {fileID: 23090965233035682}
-  - component: {fileID: 114544848663913002}
   - component: {fileID: 135778468867915136}
+  - component: {fileID: 114566467831289794}
+  - component: {fileID: 114476216749824078}
   m_Layer: 0
   m_Name: BlackHole
   m_TagString: Untagged
@@ -81,7 +82,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029763722785316}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114544848663913002
+--- !u!114 &114476216749824078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -92,6 +93,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106b55d8dfcc28d4082499d1188f0438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114566467831289794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029763722785316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be3a71028637f3342a979d13c2ea5fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractionForce: 20
+  distanceToAttract: 10
 --- !u!135 &135778468867915136
 SphereCollider:
   m_ObjectHideFlags: 1
