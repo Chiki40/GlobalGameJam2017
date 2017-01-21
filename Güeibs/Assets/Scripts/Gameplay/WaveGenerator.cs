@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveGenerator : MonoBehaviour {
+public class WaveGenerator : MonoBehaviour
+{
 
     public GameObject m_wave;
     public float TimeWave;
     public float TotalScale;
     public float TimeBetweenWaves;
     public Color WaveColor;
+    public bool InsideToOutside;
 
     private float timeAcumBetweenWaves;
     private List<GameObject> listWaves;
@@ -33,6 +35,7 @@ public class WaveGenerator : MonoBehaviour {
             Color emptyColor = WaveColor;
             emptyColor.a = 0;
             go.GetComponent<Renderer>().material.color = emptyColor;
+            go.transform.SetParent(this.transform);
             listWaves.Add(go);
             go.name = count.ToString();
             ++count;
@@ -52,11 +55,30 @@ public class WaveGenerator : MonoBehaviour {
             }
             else
             {
+                if(go == null)
+                {
+                    listToDestroy.Add(go);
+                    continue;
+                }
                 //scale
-                go.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * TotalScale, timeLerp);
+                if (InsideToOutside)
+                {
+                    go.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * TotalScale, timeLerp);
+                }
+                else
+                {
+                    go.transform.localScale = Vector3.Lerp(Vector3.one * TotalScale, Vector3.zero, timeLerp);
+                }
                 //alpha
                 Color c = go.GetComponent<Renderer>().material.color;
-                c.a = Mathf.Lerp(1, 0, timeLerp);
+                if (InsideToOutside)
+                {
+                    c.a = Mathf.Lerp(1, 0, timeLerp);
+                }
+                else
+                {
+                    c.a = Mathf.Lerp(0, 1, timeLerp);
+                }
                 go.GetComponent<Renderer>().material.color = c;
             }
         }

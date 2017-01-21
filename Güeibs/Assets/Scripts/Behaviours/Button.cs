@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Button : MonoBehaviour
 {
-    public MonoBehaviour[] BehavioursToActivate;
-    public MonoBehaviour[] BehavioursToDisable;
+    public UnityEvent[] Actions;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,13 +14,9 @@ public class Button : MonoBehaviour
 
     private void DoButton()
     {
-        for (int i = 0; i < BehavioursToActivate.Length; ++i)
+        for (int i = 0; i < Actions.Length; ++i)
         {
-            BehavioursToActivate[i].enabled = true;
-        }
-        for (int i = 0; i < BehavioursToDisable.Length; ++i)
-        {
-            BehavioursToDisable[i].enabled = false;
+            Actions[i].Invoke();
         }
     }
 }

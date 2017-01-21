@@ -13,12 +13,21 @@ public class MovePingPong : MonoBehaviour {
     private Vector3 actualP2;
     private float _timeAcum;
 
+    private Rigidbody m_rigdbody;
+
 
 	// Use this for initialization
 	void Start () {
         actualP1 = P1.position;
         actualP2 = P2.position;
         transform.position = actualP1;
+        m_rigdbody = GetComponent<Rigidbody>();
+        if(m_rigdbody == null)
+        {
+            m_rigdbody = this.gameObject.AddComponent<Rigidbody>();
+        }
+        m_rigdbody.useGravity = false;
+
 	}
 	
 	// Update is called once per frame
@@ -36,8 +45,8 @@ public class MovePingPong : MonoBehaviour {
         }
 
         float currentTime = _timeAcum / TotalTime;
-
-        transform.position = Vector3.Lerp(actualP1, actualP2, currentTime);
+        Vector3 actualPosition = Vector3.Lerp(actualP1, actualP2, currentTime);
+        m_rigdbody.MovePosition(actualPosition);
 	}
 
     private void SwitchOriginAndDestiny()
