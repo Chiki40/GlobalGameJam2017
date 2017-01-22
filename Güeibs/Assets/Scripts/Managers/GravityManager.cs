@@ -8,7 +8,6 @@ public class GravityManager : MonoBehaviour {
 
 	private List<GravityComponent> m_gravityComponents = null;
 
-	public float gravityModule = 9.8f;
 	public GameObject magnetUp = null;
 	public GameObject magnetDown = null;
 	public GameObject magnetLeft = null;
@@ -77,7 +76,7 @@ public class GravityManager : MonoBehaviour {
                 {
                     dir.Normalize();
                     Vector3 force = dir * (m_verticalDistance - distance);
-                    gravityForce.top = force * gravityModule;
+                    gravityForce.top = force * GameManager.GetInstance().gravityModule;
                 }
 			}
 			if (down) {
@@ -88,7 +87,7 @@ public class GravityManager : MonoBehaviour {
                 {
                     dir.Normalize();
                     Vector3 force = dir * (m_verticalDistance - distance);
-                    gravityForce.bottom = force * gravityModule;
+                    gravityForce.bottom = force * GameManager.GetInstance().gravityModule;
                 }
 			}
 			if (left) {
@@ -99,7 +98,7 @@ public class GravityManager : MonoBehaviour {
                 {
                     dir.Normalize();
                     Vector3 force = dir * (m_horizontalDistance - distance);
-                    gravityForce.left = force * gravityModule;
+                    gravityForce.left = force * GameManager.GetInstance().gravityModule;
                 }
 			}
 			if (right) {
@@ -110,7 +109,7 @@ public class GravityManager : MonoBehaviour {
                 {
                     dir.Normalize();
                     Vector3 force = dir * (m_horizontalDistance - distance);
-                    gravityForce.right = force * gravityModule;
+                    gravityForce.right = force * GameManager.GetInstance().gravityModule;
                 }
 			}					
 			m_gravityComponents[i].SetGravity(gravityForce);

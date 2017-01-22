@@ -1264,6 +1264,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114841980721732348, guid: 7d38b09e67dbe324e99a7dd6ed288f5a,
+        type: 2}
+      propertyPath: gravityModule
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d38b09e67dbe324e99a7dd6ed288f5a, type: 2}
   m_IsPrefabParent: 0
@@ -1433,7 +1438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecb38443caa0cb40944ef0e3c01810c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityModule: 10
   magnetUp: {fileID: 1159244075}
   magnetDown: {fileID: 153225924}
   magnetLeft: {fileID: 428000840}
