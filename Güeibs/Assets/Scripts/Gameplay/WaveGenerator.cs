@@ -16,6 +16,12 @@ public class WaveGenerator : MonoBehaviour
     private float timeAcumBetweenWaves;
     private static int count = 0;
 
+    void Start()
+    {
+        TimeWave = 1;
+        TotalScale = 30;
+    }
+
     void Update()
     {
         timeAcumBetweenWaves += Time.deltaTime;

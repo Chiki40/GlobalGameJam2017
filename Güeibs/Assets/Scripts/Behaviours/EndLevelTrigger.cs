@@ -20,6 +20,7 @@ public class EndLevelTrigger : MonoBehaviour {
         acumTime = 0;
 		pc.enabled = false;
 		pc.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        pc.gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
 	void Start() {
