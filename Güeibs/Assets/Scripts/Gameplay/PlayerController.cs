@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void OnCollisionStay(Collision col) {
 		if (col.relativeVelocity.magnitude > 20.0f && !UtilSound.instance.IsPlayingFamilySound("crash")) {
-			int rand = Random.Range(1, 4);
+			//int rand = Random.Range(1, 4);
 			//UtilSound.instance.PlaySound("crash" + rand.ToString(), 0.5f);
 		}
 	}
