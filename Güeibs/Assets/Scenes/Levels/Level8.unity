@@ -313,7 +313,7 @@ Prefab:
     - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4463793275543056, guid: 24dcac476f05b644487d6160589e52db, type: 2}
       propertyPath: m_LocalPosition.x
@@ -426,6 +426,31 @@ Prefab:
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: push
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1796066393}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24dcac476f05b644487d6160589e52db, type: 2}
@@ -677,6 +702,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e47d088b1c33c54ab58e3f92a4d15f7, type: 2}
   m_IsPrefabParent: 0
+--- !u!65 &1796066393 stripped
+BoxCollider:
+  m_PrefabParentObject: {fileID: 65246300254427500, guid: 24dcac476f05b644487d6160589e52db,
+    type: 2}
+  m_PrefabInternal: {fileID: 336600962}
 --- !u!1001 &2068172525
 Prefab:
   m_ObjectHideFlags: 0
