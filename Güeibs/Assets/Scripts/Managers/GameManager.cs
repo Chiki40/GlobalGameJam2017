@@ -61,7 +61,12 @@ public class GameManager : MonoBehaviour {
 
 	public void NextLevel()
 	{
-		SceneManager.LoadScene(LEVEL_PREFIX + (++m_currentLevel).ToString());
+		string nextSceneName = LEVEL_PREFIX + (++m_currentLevel).ToString();
+		if (m_currentLevel <= 15) {
+			SceneManager.LoadScene(nextSceneName);
+		} else {
+			SceneManager.LoadScene("credits");
+		}
 	}
 
 	public void SaveGame() {
@@ -69,6 +74,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void GoToMenu() {
+		m_currentLevel = 0;
 		SceneManager.LoadScene("Menu");
 	}
 

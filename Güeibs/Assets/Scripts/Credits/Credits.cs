@@ -14,7 +14,7 @@ public class Credits : MonoBehaviour {
 		if (!creditsImage) {
 			Debug.LogError("Error. Credits object does not have an Image associated");
 		}
-		UtilSound.instance.PlaySound("creditsmusic", 1.0f, true);
+		UtilSound.instance.PlaySound("creditsmusic", 0.15f, true);
 	}
 
 	// Update is called once per frame
