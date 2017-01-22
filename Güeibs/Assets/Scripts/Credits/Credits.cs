@@ -9,10 +9,12 @@ public class Credits : MonoBehaviour {
 	public float timeBeforeGoToMenu = 4.0f;
 
 	void Start() {
+		UtilSound.instance.StopAllSounds();
 		Image creditsImage = this.gameObject.GetComponent<Image>();
 		if (!creditsImage) {
 			Debug.LogError("Error. Credits object does not have an Image associated");
 		}
+		UtilSound.instance.PlaySound("creditsmusic", 1.0f, true);
 	}
 
 	// Update is called once per frame

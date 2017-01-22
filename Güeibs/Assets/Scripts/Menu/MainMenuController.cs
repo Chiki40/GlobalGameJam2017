@@ -25,6 +25,8 @@ public class MainMenuController : MonoBehaviour {
 
 	// Use this for initialization
 	public void Start () {
+		UtilSound.instance.StopAllSounds();
+
 		leftDoor = transform.FindChild("Puertas").GetChild(0).gameObject;
 		rightDoor = transform.FindChild("Puertas").GetChild(1).gameObject;
 		playButton = transform.FindChild("Buttons").GetChild(0).gameObject;

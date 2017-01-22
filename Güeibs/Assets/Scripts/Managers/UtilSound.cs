@@ -67,6 +67,15 @@ public class UtilSound : MonoBehaviour {
 		}
 	}
 
+	public void StopAllSounds() {
+		if (sounds == null) { return; }
+		for (int i = 0; i < sounds.Count; ++i)
+		{ // Check every playing sound
+			Destroy(sounds[i]); // Destroy the AudioSource
+			sounds.RemoveAt(i); // Remove from the list
+		}
+	}
+
 	public bool IsPlaying(string name) {
 		if (sounds == null) { return false; }
 		for (int i = 0; i < sounds.Count; ++i)
