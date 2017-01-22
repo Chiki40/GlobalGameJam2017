@@ -9,6 +9,12 @@ public class PlayerController : MonoBehaviour {
 	private float m_BlackholeDyingTime = 2.5f;
 	private float m_BlackholeDyingKillerRotationSpeed = 500.0f;
 
+	void Start() {
+		if (!UtilSound.instance.IsPlaying("music")) {
+			UtilSound.instance.PlaySound("music", 0.2f, true);
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.R)) {
