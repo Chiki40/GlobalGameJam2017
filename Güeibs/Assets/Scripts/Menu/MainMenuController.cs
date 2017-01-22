@@ -61,6 +61,7 @@ public class MainMenuController : MonoBehaviour {
 		exitButton.SetActive(false);
 
 		yield return new WaitForSeconds(timeBeforeOpeningLeftDoor);
+		UtilSound.instance.PlaySound("door");
 		RectTransform rectTrans = leftDoor.GetComponent<RectTransform>();
 		float left = rectTrans.offsetMin.x;
 		float right = rectTrans.offsetMax.x;
@@ -73,6 +74,7 @@ public class MainMenuController : MonoBehaviour {
 		}
 
 		yield return new WaitForSeconds(timeBeforeOpeningRightDoor);
+		UtilSound.instance.PlaySound("door");
 		rectTrans = rightDoor.GetComponent<RectTransform>();
 		left = rectTrans.offsetMin.x;
 		right = rectTrans.offsetMax.x;
