@@ -511,7 +511,7 @@ Prefab:
     - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4463793275543056, guid: 24dcac476f05b644487d6160589e52db, type: 2}
       propertyPath: m_LocalPosition.x
@@ -650,6 +650,31 @@ Prefab:
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 336600965}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496816184485124, guid: 24dcac476f05b644487d6160589e52db,
+        type: 2}
+      propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24dcac476f05b644487d6160589e52db, type: 2}
   m_IsPrefabParent: 0
@@ -658,6 +683,24 @@ Animator:
   m_PrefabParentObject: {fileID: 95884530747081260, guid: 24dcac476f05b644487d6160589e52db,
     type: 2}
   m_PrefabInternal: {fileID: 336600962}
+--- !u!1 &336600964 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1120038903514178, guid: 24dcac476f05b644487d6160589e52db,
+    type: 2}
+  m_PrefabInternal: {fileID: 336600962}
+--- !u!114 &336600965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336600964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a9b653d4588bf43b27ed6da4c2e510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pingpong: 1
+  baseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &345515367
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecb38443caa0cb40944ef0e3c01810c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityModule: 10
   magnetUp: {fileID: 156848535}
   magnetDown: {fileID: 760893663}
   magnetLeft: {fileID: 432240275}
