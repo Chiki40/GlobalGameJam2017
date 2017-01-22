@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.R)) {
+			GameManager.GetInstance().RestartLevel();
+			return;
+		}
 		bool up = false, down = false, left = false, right = false;
 		GetInputDirections(out up, out down, out left, out right);
 		GravityManager.GetInstance().SetGravityDirection(up, down, left, right);
