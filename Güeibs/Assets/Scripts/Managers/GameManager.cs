@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public float gravityModule = 9.8f;
+
 	private static GameManager m_instance = null;
 
 	private uint m_currentLevel = 1;
