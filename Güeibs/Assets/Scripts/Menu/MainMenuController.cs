@@ -114,18 +114,26 @@ public class MainMenuController : MonoBehaviour {
 	}
 
 	public void GoToPlay() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().NextLevel();
 	}
 		
 	public void GoToSelectionLevel() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().GoToSelectionLevel();
 	}
 
 	public void GoToCredits() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().GoToCredits();
 	}
 
 	public void ExitGame() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().ExitGame();
 	}
 }

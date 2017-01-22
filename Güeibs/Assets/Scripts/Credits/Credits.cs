@@ -40,6 +40,8 @@ public class Credits : MonoBehaviour {
 	}
 
 	public void GoToMenu() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().GoToMenu();
 	}
 }

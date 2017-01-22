@@ -31,8 +31,11 @@ public class GameManager : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.P))
-            NextLevel();
+		if (Input.GetKeyUp(KeyCode.P)) {
+			int rand = Random.Range(1, 4);
+			UtilSound.instance.PlaySound("click" + rand.ToString());
+			NextLevel();
+		}
     }
 
 	public static GameManager GetInstance() {

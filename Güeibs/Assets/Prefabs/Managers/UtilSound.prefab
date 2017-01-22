@@ -51,4 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c18b5a92da9dc44487bff6b58e0e9dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 0fc87d5719edbef418a863e8150eeb12, type: 3}
+  - {fileID: 8300000, guid: 904dfa82119ff8c48812b0acc1efd835, type: 3}
+  - {fileID: 8300000, guid: d06f4a95988ad7d4bb09257575151f12, type: 3}
+  - {fileID: 8300000, guid: 26f6dec2ac63168439ef677f6ad1dd24, type: 3}
+  - {fileID: 8300000, guid: 993fd1ba2fb162749954b4728c172b87, type: 3}
+  - {fileID: 8300000, guid: 298426d703008104cbb0b55fd6cad5d3, type: 3}
+  - {fileID: 8300000, guid: 07c5b99741b68dc4b8808a6723110c6f, type: 3}
+  - {fileID: 8300000, guid: 9b2dbcff827d69441ad0a62e362dcfe4, type: 3}
+  - {fileID: 8300000, guid: 298edd294bcfc24429ebea481a7c59b4, type: 3}
+  - {fileID: 8300000, guid: dae39613eb95ab44b8c5d15c46d03d78, type: 3}
+  - {fileID: 8300000, guid: ce7fe9378c6f5eb42ba149d2dec8c615, type: 3}
+  - {fileID: 8300000, guid: db575b1d11905c34e8f1b5694c37999d, type: 3}
+  - {fileID: 8300000, guid: dc38f07168e38e641bb1a914acc4ea9e, type: 3}
