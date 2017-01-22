@@ -35,15 +35,29 @@ public class MainMenuController : MonoBehaviour {
 			Debug.LogError("Error. One MainMenu door or button was not found by MainMenuController script");
 			return;
 		}
+
+		// Have we already passed through menu?
+		if (!PlayerPrefs.HasKey("PassedMenu")) {
+			// If we haven't, play animation
+			PlayerPrefs.SetInt("PassedMenu", 1);
+			StartCoroutine(MenuAnimationStart());
+		} else {
+			// We have passed through menu, set doors final position
+			RectTransform rectTrans = leftDoor.GetComponent<RectTransform>();
+			RectTransform rectTrans2 = rightDoor.GetComponent<RectTransform>();
+			rectTrans.offsetMin = new Vector2(leftDoorLimit, rectTrans.offsetMin.y);
+			rectTrans.offsetMax = new Vector2(leftDoorLimit, rectTrans.offsetMax.y);
+			rectTrans2.offsetMin = new Vector2(rightDoorLimit, rectTrans.offsetMin.y);
+			rectTrans2.offsetMax = new Vector2(rightDoorLimit, rectTrans.offsetMax.y);
+		}
+	}
+
+	private IEnumerator MenuAnimationStart() {
 		playButton.SetActive(false);
 		levelSelectButton.SetActive(false);
 		creditsButton.SetActive(false);
 		exitButton.SetActive(false);
 
-		StartCoroutine(MenuAnimationStart());
-	}
-
-	private IEnumerator MenuAnimationStart() {
 		yield return new WaitForSeconds(timeBeforeOpeningLeftDoor);
 		RectTransform rectTrans = leftDoor.GetComponent<RectTransform>();
 		float left = rectTrans.offsetMin.x;

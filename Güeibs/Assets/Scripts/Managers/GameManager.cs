@@ -73,4 +73,13 @@ public class GameManager : MonoBehaviour {
 		Application.Quit();
 	}
 
+	public void OnDestroy() {
+		// If we are not being deleted for duplicated singleton
+		if (this == m_instance) {
+			if (PlayerPrefs.HasKey("PassedMenu")) {
+				PlayerPrefs.DeleteKey("PassedMenu");
+			}
+		}
+	}
+
 }
