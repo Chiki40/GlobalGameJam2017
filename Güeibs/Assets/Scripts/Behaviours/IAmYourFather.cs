@@ -31,12 +31,20 @@ public class IAmYourFather : MonoBehaviour
 
     private void YouBelongToMe(GameObject go)
     {
+        if(go.tag != "Player")
+        {
+            return;
+        }
         m_originalTransforms.Add(go.GetInstanceID(), go.transform.parent);
         go.transform.parent = this.transform;
     }
 
     private void YouAreFree(GameObject go)
     {
+        if (go.tag != "Player")
+        {
+            return;
+        }
         go.transform.parent = m_originalTransforms[go.GetInstanceID()];
         m_originalTransforms.Remove(go.GetInstanceID());
         

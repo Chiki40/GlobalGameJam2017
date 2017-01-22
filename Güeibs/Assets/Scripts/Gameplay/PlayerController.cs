@@ -73,6 +73,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private IEnumerator DieElectrocution(GameObject killer) {
-		yield return new WaitForSeconds(4.0f);
+        GetComponent<Animator>().SetTrigger("Death");
+        yield return null;
+        yield return new WaitForSeconds(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
 	}
 }
