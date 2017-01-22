@@ -20,7 +20,8 @@ public class CameraMove : MonoBehaviour {
         for (int i = 0; i<otherAnimator.parameterCount;++i)
         {
             string name = otherAnimator.parameters[i].name;
-            m_animatorComponent.SetFloat(name,otherAnimator.GetFloat(name));
+            if (otherAnimator.parameters[i].type == AnimatorControllerParameterType.Float)
+                m_animatorComponent.SetFloat(name,otherAnimator.GetFloat(name));
         }
 	}
 }

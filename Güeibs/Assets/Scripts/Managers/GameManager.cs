@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.P))
+            NextLevel();
+    }
+
 	public static GameManager GetInstance() {
 		return m_instance;
 	}
