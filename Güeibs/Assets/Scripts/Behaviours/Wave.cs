@@ -5,7 +5,6 @@ using UnityEngine;
 public class Wave : MonoBehaviour {
     float TimeWave;
     float TotalScale;
-    Color WaveColor;
     bool InsideOutside;
     float TimeAcumWave;
 
@@ -53,7 +52,7 @@ public class Wave : MonoBehaviour {
     {
         TimeWave = timeWave;
         TotalScale = totalScale;
-        WaveColor = waveColor;
+        GetComponent<Renderer>().material.color = waveColor;
         InsideOutside = insideOutside;
     }
 
