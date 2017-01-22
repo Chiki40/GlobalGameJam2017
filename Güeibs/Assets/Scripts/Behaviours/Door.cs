@@ -17,5 +17,17 @@ public class Door : MonoBehaviour {
         m_animator.SetTrigger("Open");
         m_collider.isTrigger = true;
         m_collider.gameObject.AddComponent<EndLevelTrigger>();
+        BoxCollider b = (BoxCollider)m_collider;
+        Vector3 size = b.size;
+        size.z = 2;
+        b.size = size;
+        if(b.center.z < 0)
+        {
+            b.center = new Vector3(b.center.x, b.center.y, 1);
+        }
+        else
+        {
+            b.center = new Vector3(b.center.x, b.center.y, -1); 
+        }
     }
 }
