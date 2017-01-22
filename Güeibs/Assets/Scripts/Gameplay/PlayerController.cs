@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void Die(DeathReason reason, GameObject killer) {
 		Debug.Log("You have died by " + reason.ToString());
+		this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
 		StartCoroutine(DieCoroutine(reason, killer));
 	}
 
