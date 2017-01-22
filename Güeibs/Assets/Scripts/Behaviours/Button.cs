@@ -9,16 +9,26 @@ public class Button : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        DoButton();
+		if (other.gameObject.tag == "Player") {
+			DoButton();
+		}
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        DoButton();
+		if (collision.collider.gameObject.tag == "Player") {
+			DoButton();
+		}
     }
 
     private void DoButton()
     {
-        Actions.Invoke();
+		if (gameObject.name.Contains("Key")) {
+			UtilSound.instance.PlaySound("key");
+		} else if (gameObject.name.Contains("Button")) {
+			UtilSound.instance.PlaySound("switch");
+		}
+
+		Actions.Invoke();
     }
 }

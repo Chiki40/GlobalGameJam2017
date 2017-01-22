@@ -17,6 +17,10 @@ public class Credits : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			GoToMenu();
+			return;
+		}
 		RectTransform rectTrans = this.gameObject.GetComponent<RectTransform>();		
 		float bottom = rectTrans.offsetMin.y;
 		float top = rectTrans.offsetMax.y;		
@@ -32,6 +36,12 @@ public class Credits : MonoBehaviour {
 
 	private IEnumerator WaitBeforeGoToMenu() {
 		yield return new WaitForSeconds(timeBeforeGoToMenu);
+		GoToMenu();
+	}
+
+	public void GoToMenu() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().GoToMenu();
 	}
 }

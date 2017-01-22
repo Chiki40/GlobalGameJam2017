@@ -66,4 +66,28 @@ public class UtilSound : MonoBehaviour {
 			}
 		}
 	}
+
+	public bool IsPlaying(string name) {
+		if (sounds == null) { return false; }
+		for (int i = 0; i < sounds.Count; ++i)
+		{ // Check every playing sound
+			if (sounds[i].name == name)
+			{ // If the sound exists
+				return true; // It Is playing
+			}
+		}		
+		return false; // Not found. It is not playing
+	}
+
+	public bool IsPlayingFamilySound(string name) {
+		if (sounds == null) { return false; }
+		for (int i = 0; i < sounds.Count; ++i)
+		{ // Check every playing sound
+			if (sounds[i].name.Contains(name))
+			{ // If the sound exists
+				return true; // It Is playing
+			}
+		}		
+		return false; // Not found. It is not playing
+	}
 }

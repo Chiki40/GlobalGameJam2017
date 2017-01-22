@@ -13,6 +13,7 @@ public class Door : MonoBehaviour {
 
     public void Open()
     {
+		UtilSound.instance.PlaySound("door");
         m_animator.SetTrigger("Open");
         m_collider.isTrigger = true;
         m_collider.gameObject.AddComponent<EndLevelTrigger>().enabled = true;

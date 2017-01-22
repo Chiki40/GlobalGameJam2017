@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.R)) {
+			int rand = Random.Range(1, 4);
+			UtilSound.instance.PlaySound("click" + rand.ToString());
+			GameManager.GetInstance().RestartLevel();
+			return;
+		}
 		bool up = false, down = false, left = false, right = false;
 		GetInputDirections(out up, out down, out left, out right);
 		GravityManager.GetInstance().SetGravityDirection(up, down, left, right);
@@ -56,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private IEnumerator DieBlackhole(GameObject killer) {
+		UtilSound.instance.PlaySound("blackhole");
 		this.gameObject.transform.SetParent(killer.transform);
 		Vector3 initPos = this.gameObject.transform.localPosition;
 		Vector3 initScale = this.gameObject.transform.localScale;
@@ -78,6 +85,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private IEnumerator DieElectrocution(GameObject killer) {
+		UtilSound.instance.PlaySound("electrocution");
+		UtilSound.instance.PlaySound("electrocution2");
         GetComponent<Animator>().SetTrigger("Electrocution");
 		Transform rayitos = this.gameObject.transform.FindChild("rayitos");
 		if (!rayitos) {
@@ -87,5 +96,12 @@ public class PlayerController : MonoBehaviour {
 		rayitos.gameObject.GetComponent<Animator>().SetTrigger("Electrocution");
         yield return null;
         yield return new WaitForSeconds(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+	}
+
+	public void OnCollisionStay(Collision col) {
+		if (col.relativeVelocity.magnitude > 20.0f && !UtilSound.instance.IsPlayingFamilySound("crash")) {
+			int rand = Random.Range(1, 4);
+			UtilSound.instance.PlaySound("crash" + rand.ToString(), 0.5f);
+		}
 	}
 }
