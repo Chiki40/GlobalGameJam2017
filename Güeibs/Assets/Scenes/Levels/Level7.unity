@@ -344,6 +344,32 @@ Prefab:
       propertyPath: m_Radius
       value: 0.93
       objectReference: {fileID: 0}
+    - target: {fileID: 4848488092422030, guid: 536cc363c8e967d46af066c177d631f3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848488092422030, guid: 536cc363c8e967d46af066c177d631f3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800030524115240, guid: 536cc363c8e967d46af066c177d631f3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.527
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863741432955562, guid: 536cc363c8e967d46af066c177d631f3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.4885
+      objectReference: {fileID: 0}
+    - target: {fileID: 198691480616040182, guid: 536cc363c8e967d46af066c177d631f3,
+        type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 291.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 198691480616040182, guid: 536cc363c8e967d46af066c177d631f3,
+        type: 2}
+      propertyPath: randomSeed
+      value: 2058579404
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 536cc363c8e967d46af066c177d631f3, type: 2}
   m_IsPrefabParent: 0
