@@ -19,4 +19,11 @@ public class RemarkObject : MonoBehaviour {
         Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
         m_renderer.material.SetColor("_EmissionColor", finalColor);
 	}
+
+    void OnDisable()
+    {
+        float emission = 0;
+        Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
+        m_renderer.material.SetColor("_EmissionColor", finalColor);
+    }
 }
