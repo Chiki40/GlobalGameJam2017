@@ -27,7 +27,10 @@ public class MovePingPong : MonoBehaviour {
             m_rigdbody = this.gameObject.AddComponent<Rigidbody>();
         }
         m_rigdbody.useGravity = false;
-		UtilSound.instance.PlaySound("platform", 0.35f);
+        if(!PingPong)
+        {
+    		UtilSound.instance.PlaySound("platform", 0.35f);
+        }
 	}
 	
 	// Update is called once per frame
