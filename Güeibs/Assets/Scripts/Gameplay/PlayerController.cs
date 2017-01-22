@@ -73,7 +73,13 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private IEnumerator DieElectrocution(GameObject killer) {
-        GetComponent<Animator>().SetTrigger("Death");
+        GetComponent<Animator>().SetTrigger("Electrocution");
+		Transform rayitos = this.gameObject.transform.FindChild("rayitos");
+		if (!rayitos) {
+			Debug.LogError("Error. rayitos child not found on object " + this.gameObject.name);
+			yield break;
+		}
+		rayitos.gameObject.GetComponent<Animator>().SetTrigger("Electrocution");
         yield return null;
         yield return new WaitForSeconds(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
 	}
