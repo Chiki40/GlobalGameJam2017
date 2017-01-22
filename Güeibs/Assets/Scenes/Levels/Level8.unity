@@ -208,6 +208,39 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4070021742582962, guid: cb373091955aa4647b09d95b46ef47e4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.9158
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070021742582962, guid: cb373091955aa4647b09d95b46ef47e4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 198580738573871872, guid: cb373091955aa4647b09d95b46ef47e4,
+        type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198580738573871872, guid: cb373091955aa4647b09d95b46ef47e4,
+        type: 2}
+      propertyPath: randomSeed
+      value: -546944337
+      objectReference: {fileID: 0}
+    - target: {fileID: 199002290061468878, guid: cb373091955aa4647b09d95b46ef47e4,
+        type: 2}
+      propertyPath: m_SortMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199002290061468878, guid: cb373091955aa4647b09d95b46ef47e4,
+        type: 2}
+      propertyPath: m_MaxParticleSize
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 199002290061468878, guid: cb373091955aa4647b09d95b46ef47e4,
+        type: 2}
+      propertyPath: m_MinParticleSize
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb373091955aa4647b09d95b46ef47e4, type: 2}
   m_IsPrefabParent: 0

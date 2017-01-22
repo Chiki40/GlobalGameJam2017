@@ -580,6 +580,24 @@ Prefab:
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4792311994595260, guid: cff1b3348a290da4581266b423e68675, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.0182
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792311994595260, guid: cff1b3348a290da4581266b423e68675, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 198428385517107796, guid: cff1b3348a290da4581266b423e68675,
+        type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 129.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 198428385517107796, guid: cff1b3348a290da4581266b423e68675,
+        type: 2}
+      propertyPath: randomSeed
+      value: -598351888
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cff1b3348a290da4581266b423e68675, type: 2}
   m_IsPrefabParent: 0
