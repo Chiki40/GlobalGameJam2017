@@ -188,12 +188,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &253020003 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114841980721732348, guid: 7d38b09e67dbe324e99a7dd6ed288f5a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1875659450}
-  m_Script: {fileID: 11500000, guid: ae88ee8cfac2cf540bed0c580feb4262, type: 3}
 --- !u!1 &892480148
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +384,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 253020003}
+      - m_Target: {fileID: 1276550894}
         m_MethodName: GoToCredits
         m_Mode: 1
         m_Arguments:
@@ -782,7 +776,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 253020003}
+      - m_Target: {fileID: 1276550894}
         m_MethodName: GoToSelectionLevel
         m_Mode: 1
         m_Arguments:
@@ -972,8 +966,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 253020003}
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 1276550889}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1204,8 +1198,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 253020003}
-        m_MethodName: NextLevel
+      - m_Target: {fileID: 1276550894}
+        m_MethodName: GoToPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -98,4 +98,20 @@ public class MainMenuController : MonoBehaviour {
 			yield return null;
 		}
 	}
+
+	public void GoToPlay() {
+		GameManager.GetInstance().NextLevel();
+	}
+		
+	public void GoToSelectionLevel() {
+		GameManager.GetInstance().GoToSelectionLevel();
+	}
+
+	public void GoToCredits() {
+		GameManager.GetInstance().GoToCredits();
+	}
+
+	public void ExitGame() {
+		GameManager.GetInstance().ExitGame();
+	}
 }
