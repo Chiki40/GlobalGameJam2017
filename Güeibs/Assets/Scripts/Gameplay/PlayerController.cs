@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour {
 		Vector2 mousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
 
         
-        bool r2 = Input.GetAxis("R2") > -0.8f;
-        bool l2 = Input.GetAxis("L2") > -0.8f;
+        bool r2 = Input.GetJoystickNames().Length > 0 ? Input.GetAxis("R2") > -0.8f : false;
+        bool l2 = Input.GetJoystickNames().Length > 0 ? Input.GetAxis("L2") > -0.8f : false;
 
         up = Input.GetKey(KeyCode.Joystick1Button5) || Input.GetKey(KeyCode.Keypad9) || Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.UpArrow) || (Input.GetMouseButton(0) && mousePos.y >= 0.6f);
         down = l2 || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.DownArrow) || (Input.GetMouseButton(0) && mousePos.y <= 0.4f);
