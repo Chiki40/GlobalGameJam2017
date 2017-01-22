@@ -443,6 +443,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 135115259134760512, guid: ccfe96a80c5b1db4382476c1b5ac508b,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135574318403726010, guid: ccfe96a80c5b1db4382476c1b5ac508b,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024445037692556, guid: ccfe96a80c5b1db4382476c1b5ac508b,
+        type: 2}
+      propertyPath: attractionForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183700677222464, guid: ccfe96a80c5b1db4382476c1b5ac508b,
+        type: 2}
+      propertyPath: attractionForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024445037692556, guid: ccfe96a80c5b1db4382476c1b5ac508b,
+        type: 2}
+      propertyPath: distanceToAttract
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183700677222464, guid: ccfe96a80c5b1db4382476c1b5ac508b,
+        type: 2}
+      propertyPath: distanceToAttract
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccfe96a80c5b1db4382476c1b5ac508b, type: 2}
   m_IsPrefabParent: 0

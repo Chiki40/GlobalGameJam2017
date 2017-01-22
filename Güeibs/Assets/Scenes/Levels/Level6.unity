@@ -877,6 +877,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 547ca09db67fc6c47b22132072a10aa0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &674560900 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1235201045229340, guid: 31ae77d8ec038f64fb99663c4cbe1752,
+    type: 2}
+  m_PrefabInternal: {fileID: 1924162708}
 --- !u!1 &754398852
 GameObject:
   m_ObjectHideFlags: 0
@@ -10123,7 +10128,7 @@ Prefab:
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 674560900}
     - target: {fileID: 114071965617171748, guid: 31ae77d8ec038f64fb99663c4cbe1752,
         type: 2}
       propertyPath: Actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

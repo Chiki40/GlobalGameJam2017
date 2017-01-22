@@ -174,7 +174,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4103271148422922, guid: 31ae77d8ec038f64fb99663c4cbe1752, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.4
+      value: 6.92
       objectReference: {fileID: 0}
     - target: {fileID: 4103271148422922, guid: 31ae77d8ec038f64fb99663c4cbe1752, type: 2}
       propertyPath: m_LocalPosition.y
@@ -506,6 +506,10 @@ Prefab:
         type: 2}
       propertyPath: attractionForce
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613459687428670, guid: a173556e67fa2e245a07b437b0628cd4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a173556e67fa2e245a07b437b0628cd4, type: 2}
