@@ -9,14 +9,14 @@ public class Door : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         m_collider = GetComponentInChildren<Collider>();
-        m_animator = GetComponentInChildren<Animator>();
-	}
+        m_animator = GetComponentInChildren<Animator>();	}
 
     public void Open()
     {
         m_animator.SetTrigger("Open");
         m_collider.isTrigger = true;
         m_collider.gameObject.AddComponent<EndLevelTrigger>();
+        m_collider.gameObject.AddComponent<RemarkObject>();
         BoxCollider b = (BoxCollider)m_collider;
         Vector3 size = b.size;
         size.z = 2;
