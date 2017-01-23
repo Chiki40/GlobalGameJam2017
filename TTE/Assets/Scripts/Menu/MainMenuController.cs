@@ -52,6 +52,9 @@ public class MainMenuController : MonoBehaviour {
 			rectTrans2.offsetMin = new Vector2(rightDoorLimit, rectTrans.offsetMin.y);
 			rectTrans2.offsetMax = new Vector2(rightDoorLimit, rectTrans.offsetMax.y);
             FindObjectOfType<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(playButton);
+			#if UNITY_WEB_GL
+			exitButton.SetActive(false);
+			#endif
 		}
 	}
 
@@ -91,6 +94,9 @@ public class MainMenuController : MonoBehaviour {
 		playButton.SetActive(true);
 		levelSelectButton.SetActive(true);
 		creditsButton.SetActive(true);
+		#if !UNITY_WEB_GL
+		exitButton.SetActive(false);
+		#endif
 		exitButton.SetActive(true);
         FindObjectOfType<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(playButton);
 		Color color1 = playButton.GetComponent<Image>().color;
