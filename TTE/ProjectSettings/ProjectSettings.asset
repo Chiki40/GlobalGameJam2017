@@ -6,7 +6,7 @@ PlayerSettings:
   serializedVersion: 10
   productGUID: 4aebacc62191dbc48ab68eb64d55e773
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleIdentifier: com.Company.ProductName
+  bundleIdentifier: com.Grupo3.TTE
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
