@@ -9,4 +9,10 @@ public class GameCanvas : MonoBehaviour {
 		UtilSound.instance.PlaySound("click" + rand.ToString());
 		GameManager.GetInstance().GoToMenu();
 	}
+
+	public void Restart() {
+		int rand = Random.Range(1, 4);
+		UtilSound.instance.PlaySound("click" + rand.ToString());
+		GameManager.GetInstance().RestartLevel();
+	}
 }
