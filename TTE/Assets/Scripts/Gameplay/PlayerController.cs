@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
 	private float m_BlackholeDyingTime = 2.5f;
 	private float m_BlackholeDyingKillerRotationSpeed = 500.0f;
 
+	public float upperScreenPercent = 0.6f;
+	public float lowerScreenPercent = 0.4f;
+
 	void Start() {
 		if (!UtilSound.instance.IsPlaying("music")) {
 			UtilSound.instance.PlaySound("music", 0.2f, true);
@@ -29,16 +32,16 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void GetInputDirections(out bool up, out bool down, out bool left, out bool right) {
-		Vector2 mousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
-
         
         bool r2 = Input.GetJoystickNames().Length > 0 ? Input.GetAxis("R2") > -0.8f : false;
         bool l2 = Input.GetJoystickNames().Length > 0 ? Input.GetAxis("L2") > -0.8f : false;
 
-        up = Input.GetKey(KeyCode.Joystick1Button5) || Input.GetKey(KeyCode.Keypad9) || Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.UpArrow) || (Input.GetMouseButton(0) && mousePos.y >= 0.6f);
-        down = l2 || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.DownArrow) || (Input.GetMouseButton(0) && mousePos.y <= 0.4f);
-        left = Input.GetKey(KeyCode.Joystick1Button4) || Input.GetKey(KeyCode.Keypad7) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetMouseButton(0) && mousePos.x <= 0.4f);
-        right = r2 || Input.GetKey(KeyCode.Keypad3) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || (Input.GetMouseButton(0) && mousePos.x >= 0.6f);
+		Vector2 mousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
+
+		up = Input.GetKey(KeyCode.Joystick1Button5) || Input.GetKey(KeyCode.Keypad9) || Input.GetKey(KeyCode.E) || (Input.GetMouseButton(0) && ((mousePos.y >= upperScreenPercent && mousePos.x >= lowerScreenPercent) || (mousePos.x >= upperScreenPercent && mousePos.y >= lowerScreenPercent)));
+		down = l2 || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && ((mousePos.y <= lowerScreenPercent && mousePos.x <= upperScreenPercent) || (mousePos.x <= lowerScreenPercent && mousePos.y <= upperScreenPercent)));
+		left = Input.GetKey(KeyCode.Joystick1Button4) || Input.GetKey(KeyCode.Keypad7) || Input.GetKey(KeyCode.Q) || (Input.GetMouseButton(0) && ((mousePos.y >= upperScreenPercent && mousePos.x <= upperScreenPercent) || (mousePos.x <= lowerScreenPercent && mousePos.y >= lowerScreenPercent)));
+		right = r2 || Input.GetKey(KeyCode.Keypad3) || Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && ((mousePos.y <= lowerScreenPercent && mousePos.x >= lowerScreenPercent) || (mousePos.x >= upperScreenPercent && mousePos.y <= upperScreenPercent)));
 	}
 
 	public void Die(DeathReason reason, GameObject killer) {
