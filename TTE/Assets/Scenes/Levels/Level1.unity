@@ -1489,10 +1489,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1463065718416916, guid: 939bd3a667331bf419a1e13323ed21fc, type: 2}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 223706353558469822, guid: 939bd3a667331bf419a1e13323ed21fc,
         type: 2}
       propertyPath: m_Camera
