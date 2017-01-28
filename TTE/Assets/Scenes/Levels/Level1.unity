@@ -1493,6 +1493,11 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 223706353558469822, guid: 939bd3a667331bf419a1e13323ed21fc,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 745411952}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 939bd3a667331bf419a1e13323ed21fc, type: 2}
   m_IsPrefabParent: 0

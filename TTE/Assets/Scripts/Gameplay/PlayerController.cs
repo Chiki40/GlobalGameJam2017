@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum DeathReason { Blackhole, Electrocution };
 
@@ -20,12 +21,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.R)) {
-			int rand = Random.Range(1, 4);
-			UtilSound.instance.PlaySound("click" + rand.ToString());
-			GameManager.GetInstance().RestartLevel();
-			return;
-		}
 		bool up = false, down = false, left = false, right = false;
 		GetInputDirections(out up, out down, out left, out right);
 		GravityManager.GetInstance().SetGravityDirection(up, down, left, right);
@@ -46,10 +41,10 @@ public class PlayerController : MonoBehaviour {
 
 		Vector2 mousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
 
-		up = Input.GetKey(KeyCode.Joystick1Button5) || Input.GetKey(KeyCode.Keypad9) || Input.GetKey(KeyCode.E) || (Input.GetMouseButton(0) && ((mousePos.y >= upperScreenPercent && mousePos.x >= lowerScreenPercent) || (mousePos.x >= upperScreenPercent && mousePos.y >= lowerScreenPercent)));
-		down = l2 || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && ((mousePos.y <= lowerScreenPercent && mousePos.x <= upperScreenPercent) || (mousePos.x <= lowerScreenPercent && mousePos.y <= upperScreenPercent)));
-		left = Input.GetKey(KeyCode.Joystick1Button4) || Input.GetKey(KeyCode.Keypad7) || Input.GetKey(KeyCode.Q) || (Input.GetMouseButton(0) && ((mousePos.y >= upperScreenPercent && mousePos.x <= upperScreenPercent) || (mousePos.x <= lowerScreenPercent && mousePos.y >= lowerScreenPercent)));
-		right = r2 || Input.GetKey(KeyCode.Keypad3) || Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && ((mousePos.y <= lowerScreenPercent && mousePos.x >= lowerScreenPercent) || (mousePos.x >= upperScreenPercent && mousePos.y <= upperScreenPercent)));
+		up = Input.GetKey(KeyCode.Joystick1Button5) || Input.GetKey(KeyCode.Keypad9) || Input.GetKey(KeyCode.E) || (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject() && ((mousePos.y >= upperScreenPercent && mousePos.x >= lowerScreenPercent) || (mousePos.x >= upperScreenPercent && mousePos.y >= lowerScreenPercent)));
+		down = l2 || Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.A) || (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject() && ((mousePos.y <= lowerScreenPercent && mousePos.x <= upperScreenPercent) || (mousePos.x <= lowerScreenPercent && mousePos.y <= upperScreenPercent)));
+		left = Input.GetKey(KeyCode.Joystick1Button4) || Input.GetKey(KeyCode.Keypad7) || Input.GetKey(KeyCode.Q) || (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject() && ((mousePos.y >= upperScreenPercent && mousePos.x <= upperScreenPercent) || (mousePos.x <= lowerScreenPercent && mousePos.y >= lowerScreenPercent)));
+		right = r2 || Input.GetKey(KeyCode.Keypad3) || Input.GetKey(KeyCode.D) || (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject() && ((mousePos.y <= lowerScreenPercent && mousePos.x >= lowerScreenPercent) || (mousePos.x >= upperScreenPercent && mousePos.y <= upperScreenPercent)));
 	}
 
 	public void Die(DeathReason reason, GameObject killer) {
