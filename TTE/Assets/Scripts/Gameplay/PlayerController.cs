@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 	private void GetInputDirections(out bool up, out bool down, out bool left, out bool right) {
 		bool r2 = false;
 		bool l2 = false;
+		#if !UNITY_WEBGL
 		if (Input.GetJoystickNames().Length > 0) {
 			if (Input.GetJoystickNames()[0].ToUpper().Contains("XBOX")) {
 				r2 = Input.GetAxis("R2Xbox") > 0.2f;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 				l2 = Input.GetAxis("L2PS4") > -0.8f;
 			}
 		}
+		#endif
 
 		Vector2 mousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
 
