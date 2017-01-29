@@ -17,109 +17,29 @@ Platform assembly: E:\Cosas\Gamejams\2017\TTE\Compilados\Windows\TTE_Data\Manage
 Loading E:\Cosas\Gamejams\2017\TTE\Compilados\Windows\TTE_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\Cosas\Gamejams\2017\TTE\Compilados\Windows\TTE_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading E:\Cosas\Gamejams\2017\TTE\Compilados\Windows\TTE_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.099 seconds
+- Completed reload, in  0.050 seconds
 Platform assembly: E:\Cosas\Gamejams\2017\TTE\Compilados\Windows\TTE_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Cosas\Gamejams\2017\TTE\Compilados\Windows\TTE_Data\Managed\System.dll (this message is harmless)
 desktop: 2560x1440 120Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.879623 ms
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.507792 ms
+UnloadTime: 1.101075 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.530680 ms
 
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 664.
-Total: 0.351663 ms (FindLiveObjects: 0.021650 ms CreateObjectMapping: 0.038661 ms MarkObjects: 0.190832 ms  DeleteObjects: 0.099900 ms)
-
-Level completed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 404.
+Total: 0.336508 ms (FindLiveObjects: 0.020722 ms CreateObjectMapping: 0.013918 ms MarkObjects: 0.192997 ms  DeleteObjects: 0.108251 ms)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.750958 ms
+UnloadTime: 0.795805 ms
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 638.
-Total: 0.229803 ms (FindLiveObjects: 0.024743 ms CreateObjectMapping: 0.014845 ms MarkObjects: 0.160212 ms  DeleteObjects: 0.029691 ms)
-
-Level completed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.621674 ms
-
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 734.
-Total: 0.258876 ms (FindLiveObjects: 0.026289 ms CreateObjectMapping: 0.019176 ms MarkObjects: 0.175986 ms  DeleteObjects: 0.037114 ms)
-
-Level completed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.678274 ms
-
-Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 664.
-Total: 0.323827 ms (FindLiveObjects: 0.022887 ms CreateObjectMapping: 0.020722 ms MarkObjects: 0.175986 ms  DeleteObjects: 0.103921 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 665.
+Total: 0.284856 ms (FindLiveObjects: 0.031547 ms CreateObjectMapping: 0.015155 ms MarkObjects: 0.227328 ms  DeleteObjects: 0.010515 ms)
 
 You have died by Blackhole
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.661263 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 664.
-Total: 0.227019 ms (FindLiveObjects: 0.024433 ms CreateObjectMapping: 0.014536 ms MarkObjects: 0.177532 ms  DeleteObjects: 0.010206 ms)
-
-Level completed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.654150 ms
-
-Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 667.
-Total: 0.300321 ms (FindLiveObjects: 0.027526 ms CreateObjectMapping: 0.018866 ms MarkObjects: 0.184028 ms  DeleteObjects: 0.069590 ms)
-
-You have died by Blackhole
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-You have died by Blackhole
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.690955 ms
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 670.
-Total: 0.260732 ms (FindLiveObjects: 0.026599 ms CreateObjectMapping: 0.014845 ms MarkObjects: 0.196090 ms  DeleteObjects: 0.022578 ms)
-
-Level completed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.677656 ms
-
-Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 676.
-Total: 0.305579 ms (FindLiveObjects: 0.023196 ms CreateObjectMapping: 0.020103 ms MarkObjects: 0.170419 ms  DeleteObjects: 0.091550 ms)
-
-You have died by Electrocution
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.659098 ms
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 679.
-Total: 0.244030 ms (FindLiveObjects: 0.027836 ms CreateObjectMapping: 0.014227 ms MarkObjects: 0.188667 ms  DeleteObjects: 0.012371 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.677346 ms
-
-Unloading 59 unused Assets to reduce memory usage. Loaded Objects now: 378.
-Total: 0.377953 ms (FindLiveObjects: 0.017010 ms CreateObjectMapping: 0.012680 ms MarkObjects: 0.141345 ms  DeleteObjects: 0.206915 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 900 -> priority: 1 
+  Thread -> id: 14ec -> priority: 1 
