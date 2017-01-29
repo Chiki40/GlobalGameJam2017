@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 95149620445628572}
   - component: {fileID: 65045876159255322}
   - component: {fileID: 114482152659317316}
+  - component: {fileID: 114921802351445426}
   m_Layer: 0
   m_Name: Button (4)
   m_TagString: Untagged
@@ -215,6 +216,7 @@ GameObject:
   - component: {fileID: 95048796893639160}
   - component: {fileID: 65670286143285820}
   - component: {fileID: 114704050144060388}
+  - component: {fileID: 114985621983522826}
   m_Layer: 0
   m_Name: Button (3)
   m_TagString: Untagged
@@ -399,22 +401,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1860250189679046
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4080500458430650}
-  - component: {fileID: 114941545327502474}
-  m_Layer: 0
-  m_Name: WaveGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4043937768004510
 Transform:
   m_ObjectHideFlags: 1
@@ -428,19 +414,6 @@ Transform:
   m_Father: {fileID: 4482194356671032}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!4 &4080500458430650
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860250189679046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4613459687428670}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4104712765385972
 Transform:
   m_ObjectHideFlags: 1
@@ -474,7 +447,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354798232598668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.7, y: 0, z: 22.5}
+  m_LocalPosition: {x: -9.7, y: 0, z: 23.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4284510764980998}
@@ -521,7 +494,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4613459687428670}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!4 &4398604895391554
 Transform:
@@ -630,10 +603,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753770716326704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.3, y: 0, z: 3.3}
+  m_LocalPosition: {x: -8.51, y: 0, z: 3.3}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
-  - {fileID: 4080500458430650}
   - {fileID: 4345223124279114}
   m_Father: {fileID: 4482194356671032}
   m_RootOrder: 0
@@ -1350,6 +1322,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 114921802351445426}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 65045876159255322}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114921802351445426}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114506292352402034
@@ -1390,7 +1395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3a71028637f3342a979d13c2ea5fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionForce: 100
+  attractionForce: 50
   distanceToAttract: 10
 --- !u!114 &114648649838760204
 MonoBehaviour:
@@ -1466,26 +1471,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 114985621983522826}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 114985621983522826}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 65670286143285820}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114941545327502474
+--- !u!114 &114921802351445426
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860250189679046}
+  m_GameObject: {fileID: 1354798232598668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1230df4c6ac36a84eafced975328dad9, type: 3}
+  m_Script: {fileID: 11500000, guid: 92a9b653d4588bf43b27ed6da4c2e510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_wave: {fileID: 1714732676771822, guid: 268da30f2d44eaa409954ccb166a2481, type: 2}
-  TimeWave: 1
-  TotalScale: 3.6
-  TimeBetweenWaves: 0.5
-  WaveColor: {r: 1, g: 0, b: 0, a: 0}
-  InsideToOutside: 0
-  DestroySpeed: 4
+  pingpong: 1
+  baseColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114985621983522826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1402627802538022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a9b653d4588bf43b27ed6da4c2e510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pingpong: 1
+  baseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!135 &135534673320392752
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1496,7 +1542,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.42
+  m_Radius: 1.11
   m_Center: {x: 0, y: 0.00000166893, z: 0}
 --- !u!137 &137578928764126242
 SkinnedMeshRenderer:
@@ -1641,9 +1687,9 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   moveWithTransform: 0
-  moveWithCustomTransform: {fileID: 4613459687428670}
+  moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -459632626
+  randomSeed: -2006649122
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2459,7 +2505,7 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4283375669
+          rgba: 4287642978
         key1:
           serializedVersion: 2
           rgba: 4283375669
@@ -2503,7 +2549,7 @@ ParticleSystem:
       minGradient:
         key0:
           serializedVersion: 2
-          rgba: 4278190080
+          rgba: 4281735216
         key1:
           serializedVersion: 2
           rgba: 4278190080
@@ -4239,7 +4285,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: db6792ebd9078c040a219ad81f5adff5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

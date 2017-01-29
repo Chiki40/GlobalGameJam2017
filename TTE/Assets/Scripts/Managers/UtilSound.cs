@@ -13,6 +13,8 @@ public class UtilSound : MonoBehaviour {
 	private List<GameObject> sounds = null;
 	private Dictionary<string, AudioClip> clipsDictionary;
 
+	private bool _focus = true;
+
 	void Awake() {
 		if (instance == null) {
 			instance = this;
@@ -23,6 +25,7 @@ public class UtilSound : MonoBehaviour {
 			{
 				clipsDictionary.Add(ac.name, ac);
 			}
+			_focus = true;
 		} else {
 			Destroy(this); // Destroy the newest UtilSound script instance
 		}
@@ -31,7 +34,7 @@ public class UtilSound : MonoBehaviour {
 	private void Update() {
 		if (sounds == null) { return; }
 		for (int i = 0; i < sounds.Count; ++i) { // Check every playing sound
-			if (!sounds[i].GetComponent<AudioSource>().isPlaying) { // If the sound exists
+			if (!sounds[i].GetComponent<AudioSource>().isPlaying && _focus) { // If the sound exists
 				Destroy(sounds[i]); // Destroy the AudioSource
 				sounds.RemoveAt(i); // Remove from the list
 			}
@@ -98,5 +101,9 @@ public class UtilSound : MonoBehaviour {
 			}
 		}		
 		return false; // Not found. It is not playing
+	}
+
+	void OnApplicationFocus(bool focus) {
+		_focus = focus;
 	}
 }
